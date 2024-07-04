@@ -1,0 +1,5 @@
+@prefix exe:   <http://example.org/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+
+exe:askResult  a  prov:Entity;
+        prov:value   "false" .

@@ -1,0 +1,63 @@
+
+
+prefix prov: <http://www.w3.org/ns/prov#> 
+prefix d2p: <http://uml2prov.unirioja.es/ns/d2p#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix sch2p: <http://uml2prov.unirioja.es/ns/sch2p#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix exe: <http://example.org/> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix tmpl: <http://openprovenance.org/tmpl#> 
+prefix bitemp: <http://uml2prov.unirioja.es/ns/bitemp#> 
+prefix o2p: <http://uml2prov.unirioja.es/ns/o2p#> 
+prefix var: <http://openprovenance.org/var#> 
+
+
+SELECT *  WHERE{
+	{
+		SELECT distinct  ?input ?smoType WHERE {
+			exe:developer_sub_a sch2p:tableName ?a.
+			exe:developer_sub_a prov:hadMember  ?targetColumn.
+			?targetColumnValue prov:specializationOf ?targetColumn.
+			?targetColumn sch2p:columnName "surname".
+			?targetColumnValue prov:wasGeneratedBy ?smoType.
+			?targetColumnValue d2p:columnValue "ZaccheriaSN".
+			?targetColumnValue bitemp:startTransTime ?start.
+			?targetColumnValue prov:wasDerivedFrom ?input.
+			filter not exists {
+				?targetColumnValue2 d2p:columnValue "ZaccheriaSN".
+	      		?targetColumnValue2 bitemp:startTransTime ?start2.
+	      		filter (?start2 > ?start)
+      	    }
+		}
+
+	} 
+	union
+	{
+		SELECT distinct ?input ?smoType WHERE{
+		{
+			SELECT distinct ?input2   WHERE {
+				exe:developer_sub_a sch2p:tableName ?a.
+				exe:developer_sub_a prov:hadMember  ?targetColumn.
+				?targetColumnValue prov:specializationOf ?targetColumn.
+				?targetColumn sch2p:columnName "surname".
+				?targetColumnValue d2p:columnValue "ZaccheriaSN".
+				?targetColumnValue bitemp:startTransTime ?start1.
+				?targetColumnValue prov:wasDerivedFrom ?input2.
+				filter not exists {
+					?targetColumnValue2 d2p:columnValue "ZaccheriaSN".
+		      		?targetColumnValue2 bitemp:startTransTime ?start2.
+		      		filter (?start2 > ?start1)
+	      	    }
+			}
+		}
+		?input2 prov:wasDerivedFrom+ ?input.
+		?input2 a prov:Entity , d2p:value.
+		?input2 prov:wasGeneratedBy ?smoType.
+	} 
+
+	}
+}
+
+
+
