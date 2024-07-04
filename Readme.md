@@ -33,12 +33,16 @@ To test *PROV-IDEA Provenance Inspector* you'll have to run the **TextEditor**.
 
 ## References
 
-[1] PROV-IDEA. Supplementary material. Available at: https://zenodo.org/records/10701239.
-[2] SPARQL 1.1 Query Language. Available at [https://www.w3.org/TR/sparql11-query/](https://www.w3.org/TR/sparql11-query/).
-[3] Luc Moreau, Belfrit Victor Batlajery, Trung Dong Huynh, Danius Michaelides, and Heather Packer. 2018. A Templating System to Generate
+- [1] PROV-IDEA. Supplementary material. Available at: https://zenodo.org/records/10701239.
+
+- [2] SPARQL 1.1 Query Language. Available at [https://www.w3.org/TR/sparql11-query/](https://www.w3.org/TR/sparql11-query/).
+
+- [3] Luc Moreau, Belfrit Victor Batlajery, Trung Dong Huynh, Danius Michaelides, and Heather Packer. 2018. A Templating System to Generate
 Provenance. IEEE Transactions on Software Engineering 44, 2 (2018), 103–121.
-[4] Paul Groth and Luc Moreau (eds.). 2013. PROV-Overview. An Overview of the PROV Family of Documents. W3C Working Group Note NOTE-prov-
+
+- [4] Paul Groth and Luc Moreau (eds.). 2013. PROV-Overview. An Overview of the PROV Family of Documents. W3C Working Group Note NOTE-prov-
 overview-20130430. World Wide Web Consortium. Available at [www.w3.org/TR/2013/NOTE-prov-overview-20130430/](www.w3.org/TR/2013/NOTE-prov-overview-20130430/).
-[5] PROV-IDEA Expander. Available at [https://www.w3.org/TR/sparql11-query/](https://github.com/PROV-IDEA/PROV-IDEA-Expander/).
+
+- [5] PROV-IDEA Expander. Available at [https://www.w3.org/TR/sparql11-query/](https://github.com/PROV-IDEA/PROV-IDEA-Expander/).
 
 
