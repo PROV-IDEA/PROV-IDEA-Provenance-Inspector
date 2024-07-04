@@ -1,9 +1,8 @@
 # PROV-IDEA Provenance Inspector
 
-This tool has been developed as part of the PROV-IDEA [1] approach to exploit provenance data using SPARQL [2]. PROV-IDEA is presented as a PROV-Interoperable Database 
-Evolution Approach aimed at integrating provenance information into relational database schema evolution, using PROV as provenance framework.
+This tool has been developed as part of the PROV-IDEA [1] approach to exploit provenance data using SPARQL [2]. 
 
-PROV-IDEA proposes the use of *PROV templates* [3], expressed in PROV [4], for Schema Modification Operators (SMOs) and Data Modification Operators (DMOs) to structure the 
+PROV-IDEA is presented as a PROV-Interoperable Database Evolution Approach aimed at integrating provenance information into relational database schema evolution, using PROV as provenance framework. PROV-IDEA proposes the use of *PROV templates* [3], expressed in PROV [4], for Schema Modification Operators (SMOs) and Data Modification Operators (DMOs) to structure the 
 provenance to be generated from database evolution. More specifically, the approach establishes a set of PROV Templates to represent SMOs and DMOs. These templates contain
 variables that act as placeholders for values. On the other hand, following the approach, as SMOs and DMOs take place, *sets of bindings* are generated, which are mainly 
 variable-value pairs that associate variables of the templates and values. Finally, the *expansion algorithm* [3] can be used to generate *PROV documents* from templates, 
